@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "tb_client")
 public class Client implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -28,7 +30,8 @@ public class Client implements Serializable{
 	public Client() {
 		
 	}
-
+	
+	
 	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
 		this.id = id;
 		this.name = name;
